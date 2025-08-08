@@ -26,13 +26,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          podman build -t harbor.cs.com/java-app:${{ github.sha }} .
+          podman build -t 172.25.0.53/java-app:${{ github.sha }} .
         working-directory: ${{ github.workspace }}
 
       - name: Login to Harbor
         uses: docker/login-action@v2
         with:
-          registry: harbor.cs.com
+          registry: 172.25.0.53
           username: admin
           password: admin123
 
