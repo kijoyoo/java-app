@@ -35,11 +35,11 @@ jobs:
 
       - name: Push Docker image
         run: |
-          podman push --tls-verify=false 14.63.178.50/java-app:${{ github.sha }}
+          podman push --tls-verify=false 14.63.178.50/java-app:${{ github.sha }} --tls-verify=false
 
       - name: Update deployment.yaml image tag
         run: |
-          sed -i "s|image: .*|image: harbor.cs.com/java-app:${{ github.sha }}|" k8s/deployment.yaml
+          sed -i "s|image: .*|image: 14.63.178.50/java-app:${{ github.sha }}|" k8s/deployment.yaml
 
       - name: Commit and push updated deployment.yaml
         run: |
