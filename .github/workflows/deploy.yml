@@ -26,19 +26,19 @@ jobs:
 
       - name: Build Docker image
         run: |
-          podman build -t 210.104.77.128/java-app:${{ github.sha }} .
+          podman build -t harbor.sj.io/java-app:${{ github.sha }} .
         working-directory: ${{ github.workspace }}
 
       - name: Login to Harbor
         uses: docker/login-action@v2
         with:
-          registry: 210.104.77.128
+          registry: harbor.sj.io
           username: admin
           password: admin123
 
       - name: Push Docker image
         run: |
-          podman push 210.104.77.128/java-app:${{ github.sha }}
+          podman push harbor.sj.io/java-app:${{ github.sha }}
 
       - name: Update deployment.yaml image tag
         run: |
