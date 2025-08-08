@@ -32,7 +32,7 @@ jobs:
       - name: Login to Harbor
         uses: docker/login-action@v2
         with:
-          registry: 172.25.0.53
+          registry: http://172.25.0.53
           username: admin
           password: admin123
 
