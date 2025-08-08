@@ -27,6 +27,7 @@ jobs:
       - name: Build Docker image
         run: |
           podman build -t harbor.cs.com/java-app:${{ github.sha }} .
+        working-directory: ${{ github.workspace }}
 
       - name: Login to Harbor
         uses: docker/login-action@v2
