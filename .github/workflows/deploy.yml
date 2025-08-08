@@ -38,7 +38,7 @@ jobs:
 
       - name: Push Docker image
         run: |
-          podman push harbor.cs.com/java-app:${{ github.sha }}
+          podman push 172.25.0.53/java-app:${{ github.sha }}
 
       - name: Update deployment.yaml image tag
         run: |
