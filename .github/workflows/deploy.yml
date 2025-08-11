@@ -31,11 +31,11 @@ jobs:
 
       - name: Login to Harbor
         run: |
-          docker login 14.63.178.50 --username admin --password admin123 --tls-verify=false
+          docker login 14.63.178.50 --username admin --password admin123 
 
       - name: Push Docker image
         run: |
-          docker push --tls-verify=false 14.63.178.50/java-app:${{ github.sha }} --tls-verify=false
+          docker push 14.63.178.50/java-app:${{ github.sha }}
 
       - name: Update deployment.yaml image tag
         run: |
