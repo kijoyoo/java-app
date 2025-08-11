@@ -1,5 +1,5 @@
 FROM openjdk:17
-COPY ./src /app
+COPY ./out /app
 WORKDIR /app
 CMD ["java", "Hello"]
 
