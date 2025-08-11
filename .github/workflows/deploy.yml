@@ -26,16 +26,16 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t 14.63.178.50/java-app:${{ github.sha }} .
+          podman build --tls-verify=false -t 14.63.178.50/java-app:${{ github.sha }} .
         working-directory: ${{ github.workspace }}
 
       - name: Login to Harbor
         run: |
-          docker login 14.63.178.50 --username admin --password admin123 
+          podman login 14.63.178.50 --username admin --password admin123 --tls-verify=false
 
       - name: Push Docker image
         run: |
-          docker push 14.63.178.50/java-app:${{ github.sha }}
+          podman push --tls-verify=false 14.63.178.50/java-app:${{ github.sha }}
 
       - name: Update deployment.yaml image tag
         run: |
