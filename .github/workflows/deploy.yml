@@ -26,7 +26,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          podman build --tls-verify=false -t 14.63.178.50/java-app:${{ github.sha }} .
+          podman build  --no-cache --tls-verify=false -t 14.63.178.50/java-app:${{ github.sha }} .
         working-directory: ${{ github.workspace }}
 
       - name: Login to Harbor
