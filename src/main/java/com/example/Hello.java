@@ -4,8 +4,9 @@ public class Hello {
         System.out.println("no2");
         System.out.println("no3");
 
-        while(true) {
+        while (true) {
             Thread.sleep(1000);
         }
     }
+}
 
