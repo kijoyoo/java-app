@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: harbor.cs.com/java-app:PLACEHOLDER
+          image: 14.63.178.50/java-app/java-app:2b81984a7ed85b7eb4039ea2e499f7a289d2093c
           ports:
             - containerPort: 8080
 
