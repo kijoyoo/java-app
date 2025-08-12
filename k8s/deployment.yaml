@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: 14.63.178.50/java-app/java-app:f170c23611b35dde50bc87cd8431de838abc556f
+          image: 14.63.178.50/java-app/java-app:a61ffac0ff20a57875e5ebc79a86af2a119e22b6
           ports:
             - containerPort: 8080
 
