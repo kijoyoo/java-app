@@ -7,9 +7,7 @@ public class Hello {
         System.out.println("no5");
         System.out.println("no6");
         
-         while (true) {
-            Thread.sleep(1000);
-        }
+      
     }
 }
 
