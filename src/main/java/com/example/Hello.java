@@ -6,6 +6,7 @@ public class Hello {
         System.out.println("no4");
         System.out.println("no5");
         System.out.println("no6");
+        System.out.println("no7");
 
         while (true) {
             Thread.sleep(1000);
